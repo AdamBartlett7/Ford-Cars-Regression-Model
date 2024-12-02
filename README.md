@@ -18,7 +18,11 @@ Features
 - Making predictions
 
 Installation
-
+- Clone the repostiory using:
+  - git clone https://github.com/AdamBartlett7/Ford-Cars-Regression-Model.git
+  - cd Ford-Cars-Regression-Model
+- To install the necessary python libraries
+   - pip install -r requirements.txt
 
 Usage
 - Run Ford_dataset_cleaning.ipynb to see the initial dataset and how it was cleaned.
@@ -36,10 +40,10 @@ Results
   were production year and engine size. While the features which negatively impacted price were mileage and mpg.
 - Out of the three models contructed the first model which included all the features performed the best.
 - With these scores on the testing set
-  R-squared : 0.855
-  MAE : 1211.641
-  MSE : 2405999.398
-  RMSE : 1551.128
+   - R-squared : 0.855
+   - MAE : 1211.641
+   - MSE : 2405999.398
+   - RMSE : 1551.128
 
 License
 - This project is licensed under the MIT License. See the LICENSE file for details.
