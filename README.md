@@ -20,9 +20,11 @@ Features
 Installation
 - Clone the repostiory using:
   - git clone https://github.com/AdamBartlett7/Ford-Cars-Regression-Model.git
+- Navigate to the correct directory using:
   - cd Ford-Cars-Regression-Model
-- To install the necessary python libraries
-   - pip install -r requirements.txt
+- To create your own virtual environment with the necessary python libraries use:
+   - conda env create -f environment.yml
+- Open any code editor and run the files.
 
 Usage
 - Run Ford_dataset_cleaning.ipynb to see the initial dataset and how it was cleaned.
@@ -36,8 +38,16 @@ Dataset
 - The dataset was sourced from - https://www.kaggle.com/datasets/adhurimquku/ford-car-price-prediction
 
 Results
-- Some key insights from the linear regression models were that the features which most postively impacted the car price 
-  were production year and engine size. While the features which negatively impacted price were mileage and mpg.
+- From the data analysis and visualisations I found out that Mustangs are the most expensive model on average while Fiestas have the best MPG.
+- Also as expected the average price gradually increased with the newer production year. Cars produced in 2010 had and average price of $5000.
+  While the most recent cars produced in 2020 had an average price of $19,000. 
+- However the same gradual increase was not seen in average MPG. The highest average MPG was in 2015 and 2016 with 61MPG.
+  After 2016 the average dropped back down into the 50s.
+- Some other findings were seeing the spread of mileage for petrol and diesel cars. Diesel cars had a much larger range and higher 50th and 75th percentile values.
+- Also I looked into the spread of price for each type of transmission and found that automatic cars had the higher 25th, 50th and 75th values followed by semi-automatics.
+
+- Some key insights from the linear regression models were that the features which most postively impacted (increased) the car price 
+  were production year and engine size. While the features which negatively impacted (decreased) the price were mileage and mpg.
 - Out of the three models contructed the first model which included all the features performed the best.
 - With these scores on the testing set
    - R-squared : 0.855
