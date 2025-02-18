@@ -6,6 +6,7 @@
   different feature subsets. The models were evaluated using various metrics and learning curves.
 
 # Dataset
+
 The dataset include information on various used Ford car models with features such as:
 - Model
 - Production year
@@ -23,10 +24,10 @@ The dataset was sourced from - https://www.kaggle.com/datasets/adhurimquku/ford-
 # 1. Data Cleaning & Preprocessing
 
 To ensure the quality of the dataset, the following steps were performed:
-- Handling Missing/incorrect Values: Imputed/changed or removed missing/incorrect data.
-- Outlier Removal: Used 3 standard deviation from the mean to deem which values were outliers
-- Feature Engineering: Created dummy variables for categorical features.
-- Feature Scaling: Standardized numerical features where necessary.
+- Handling missing/incorrect Values: Imputed/changed or removed missing/incorrect data.
+- Outlier removal: Used 3 standard deviation from the mean to deem which values were outliers.
+- Feature engineering: Created dummy variables for categorical features.
+- Feature scaling: Standardized numerical features where necessary.
 
 # 2. Exploratory Data Analysis
 
@@ -55,6 +56,7 @@ Each model was evaluated using the following metrics:
 Additionally, learning curves were generated to analyze model performance and potential overfitting/underfitting.
 
 # Installation
+
 - Clone the repostiory using:
   - git clone https://github.com/AdamBartlett7/Ford-Cars-Regression-Model.git
 - Navigate to the correct directory using:
@@ -73,6 +75,7 @@ Additionally, learning curves were generated to analyze model performance and po
 # Results
 
 # Data Analysis
+
 - From the data analysis and visualisations I found out that Mustangs are the most expensive model on average while Fiestas have the best MPG.
 - Also as expected the average price gradually increased with the newer production year. Cars produced in 2010 had and average price of $5000.
   While the most recent cars produced in 2020 had an average price of $19,000. 
@@ -83,9 +86,11 @@ Additionally, learning curves were generated to analyze model performance and po
 
 # Linear Regression Models
 
-- Some key insights from the linear regression models were that the features which most postively impacted (increased) the car price 
+- Some key insights from the linear regression models were that the features which most positively impacted (increased) the car price 
   were production year and engine size. While the features which negatively impacted (decreased) the price were mileage and mpg.
-  All the features and their model coefficients can be seen in this ![Visualization](model_1_features_&_coefficients_graph.png)
+  All the features and their model coefficients can be seen in this bar graph.
+  ![Visualization](model_1_features_&_coefficients_graph.png)
+  
 - Out of the three models contructed the first model which included all the features performed the best.
 - With these scores on the testing set
    - R-squared : 0.855
@@ -98,18 +103,27 @@ Additionally, learning curves were generated to analyze model performance and po
 # Actual VS Predicted
 
  - This visualisation shows the actual prices for the cars vs the predicted values that the model generated.
- - ![Visualization](scatter_actual_vs_predicted.png)
+   ![Visualization](scatter_actual_vs_predicted.png)
+ - We can see that the model has performed very well with the majority of predicted points being around the line so close the actual price. However there are a few 
+   prediction, especially near the start and end of the line where they are further away from the actual price. This highlights that the model struggles to get accurate 
+   predictions for car that are either really cheap or really expensive. To help combat this issue the addition of more data that includes cheap and expensive cars should 
+   hopefully reduce the error of the model's predictions.
+   
 
 # Learning Curve
 
 - This visualisation shows the learning curve for the first model which performed the best.
-- ![Visualization](model_1_learning_curve.png)
+  ![Visualization](model_1_learning_curve.png)
+- From this learning curve we can see that the model isn't overfitting and generalises well. This is because the training data has a consistent score throughout and the 
+  validation score improves to nearly the same as the training score by the end.
+
+# Future Improvements
+
+- Expand the dataset to include more rows of data especially cheap and expensive ford cars.
+- Obtain data on more models of ford cars that could help improve the model.
+- Feature engineering - create some additional features that could help find better patterns in the data.
  
-  
-
-  
-
-License
+# License
 - This project is licensed under the MIT License. See the LICENSE file for details.
 
 
